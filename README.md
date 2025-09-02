@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,7 @@
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #db4b4b 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -73,14 +74,14 @@
         .form-group {
             margin-bottom: 25px;
         }
-         label {
+        label {
             display: block;
             margin-bottom: 8px;
             color: #333;
             font-weight: 600;
             font-size: 14px;
         }
-         input[type="number"] {
+        input[type="number"] {
             width: 100%;
             padding: 15px;
             border: 2px solid #e1e5e9;
@@ -95,7 +96,7 @@
             background: white;
             box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         }
-         .submit-btn {
+        .submit-btn {
             width: 100%;
             padding: 15px;
             background: linear-gradient(135deg, #667eea, #764ba2);
@@ -109,14 +110,14 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-         .submit-btn:hover {
+        .submit-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
         }
         .submit-btn:active {
             transform: translateY(0);
         }
-         .prank-banner {
+        .prank-banner {
             position: fixed;
             top: 0;
             left: 0;
@@ -139,18 +140,18 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.3);
             animation: bounce 0.6s ease-out;
         }
-         .prank-title {
+        .prank-title {
             font-size: 4em;
             font-weight: bold;
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-          .prank-message {
+        .prank-message {
             font-size: 1.5em;
             margin-bottom: 30px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
-         .close-btn {
+        .close-btn {
             padding: 15px 30px;
             background: white;
             color: #ff6b6b;
@@ -161,11 +162,11 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-         .close-btn:hover {
+        .close-btn:hover {
             background: #f1f1f1;
             transform: scale(1.05);
         }
-         @keyframes slideDown {
+        @keyframes slideDown {
             from {
                 transform: translateY(-100%);
             }
@@ -173,7 +174,7 @@
                 transform: translateY(0);
             }
         }
-         @keyframes bounce {
+        @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {
                 transform: translateY(0);
             }
@@ -184,10 +185,10 @@
                 transform: translateY(-10px);
             }
         }
-         .required {
+        .required {
             color: #ff6b6b;
         }
-         .info-text {
+        .info-text {
             font-size: 14px;
             color: #666;
             margin-top: 20px;
@@ -210,9 +211,11 @@
                 <label for="schoolId">Student School ID <span class="required">*</span></label>
                 <input type="number" id="schoolId" name="schoolId" required placeholder="Enter your school ID (numbers only)" min="1">
             </div>
-             <button type="submit" class="submit-btn">Complete Registration</button>
+            
+<button type="submit" class="submit-btn">Complete Registration</button>
         </form>
-         <p class="info-text">
+        
+<p class="info-text">
             Please use your official school ID for registration. 
             You will receive confirmation and further instructions via your registered contact.
         </p>
@@ -222,22 +225,20 @@
         <div class="prank-content">
             <div class="prank-title">🎉 PRANKED! 🎉</div>
             <div class="prank-message">
-                TOR NANANI TOI EKTA GATA . NADIA TOI ATO GADA 
-                KIBABH ? 
+                Haha! You just got pranked! 😄<br>
+                There's no actual school registration here!<br>
+                Hope you had a good laugh! 
             </div>
             <button class="close-btn" onclick="closePrank()">Got me good! 😂</button>
         </div>
     </div>
-
 <script>
         // Load the school logo from URL
         function loadSchoolLogo() {
             const logoImg = document.getElementById('schoolLogo');
             const logoUrl = 'https://scontent.fcgp7-1.fna.fbcdn.net/v/t39.30808-1/465609910_1039113178234400_6574594893766783494_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=107&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=9ENLSNfi9K8Q7kNvwGj5oOY&_nc_oc=Adn3YkMbagHeiENywXQHmtQ3lgOrddRBdrz07s4XlXhiWF1K8m796ppIyrAs7tbept4&_nc_zt=24&_nc_ht=scontent.fcgp7-1.fna&_nc_gid=m6jlUGmvrsPBS7IS9LMT8A&oh=00_AfU5lAFHujQ-hRLpUwTBiSE2hYtJgZ7VkTvQF7bmdN5pQQ&oe=68BCAA48';
-            
             logoImg.src = logoUrl;
             logoImg.style.display = 'block';
-            
             // Handle error if image fails to load
             logoImg.onerror = function() {
                 console.log('Could not load logo from URL, using fallback');
@@ -253,23 +254,17 @@
                 logoContainer.style.alignItems = 'center';
                 logoContainer.style.justifyContent = 'center';
             };
-            
             logoImg.onload = function() {
                 console.log('School logo loaded successfully!');
             };
         }
-        
         // Initialize logo when page loads
         window.addEventListener('load', loadSchoolLogo);
-        
         let userSchoolId = '';
-        
         document.getElementById('registrationForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
             userSchoolId = document.getElementById('schoolId').value;
             console.log('School ID entered:', userSchoolId); // Debug log
-            
             // Check if it's a valid integer
             if (userSchoolId && userSchoolId.trim() !== '' && Number.isInteger(Number(userSchoolId)) && Number(userSchoolId) > 0) {
                 showPrank();
@@ -278,13 +273,10 @@
                 document.getElementById('schoolId').focus();
             }
         });
-        
         // Alternative trigger - also listen for button click
         document.querySelector('.submit-btn').addEventListener('click', function(e) {
             e.preventDefault();
-            
             userSchoolId = document.getElementById('schoolId').value;
-            
             // Check if it's a valid integer
             if (userSchoolId && userSchoolId.trim() !== '' && Number.isInteger(Number(userSchoolId)) && Number(userSchoolId) > 0) {
                 showPrank();
@@ -293,11 +285,9 @@
                 document.getElementById('schoolId').focus();
             }
         });
-        
         function showPrank() {
             const prankBanner = document.getElementById('prankBanner');
             prankBanner.style.display = 'flex';
-            
             // Add some extra fun effects
             setTimeout(() => {
                 const prankContent = document.querySelector('.prank-content');
@@ -307,20 +297,16 @@
                 }, 200);
             }, 300);
         }
-        
         function closePrank() {
             const prankBanner = document.getElementById('prankBanner');
             prankBanner.style.animation = 'slideDown 0.5s ease-out reverse';
-            
             setTimeout(() => {
                 prankBanner.style.display = 'none';
                 prankBanner.style.animation = 'slideDown 0.5s ease-out';
-                
                 // Reset form for another prank
                 document.getElementById('registrationForm').reset();
             }, 500);
         }
-        
         // Add some hover effects to make it more convincing
         document.getElementById('schoolId').addEventListener('input', function() {
             if (this.value && Number.isInteger(Number(this.value)) && Number(this.value) > 0) {
