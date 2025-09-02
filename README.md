@@ -10,7 +10,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #db4b4b 0%, #764ba2 100%);
@@ -20,7 +19,6 @@
             align-items: center;
             padding: 20px;
         }
-        
         .form-container {
             background: white;
             border-radius: 15px;
@@ -31,7 +29,6 @@
             position: relative;
             overflow: hidden;
         }
-        
         .form-container::before {
             content: '';
             position: absolute;
@@ -41,12 +38,10 @@
             height: 5px;
             background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
         }
-        
         .school-header {
             text-align: center;
             margin-bottom: 30px;
         }
-        
         .school-logo {
             width: 100px;
             height: 100px;
@@ -58,40 +53,34 @@
             overflow: hidden;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
-        
         .school-logo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 50%;
         }
-        
         h1 {
             color: #333;
             font-size: 24px;
             margin-bottom: 10px;
             line-height: 1.2;
         }
-        
         .subtitle {
             color: #666;
             font-size: 16px;
             margin-bottom: 20px;
         }
-        
         .form-group {
             margin-bottom: 25px;
         }
-        
-        label {
+         label {
             display: block;
             margin-bottom: 8px;
             color: #333;
             font-weight: 600;
             font-size: 14px;
         }
-        
-        input[type="number"] {
+         input[type="number"] {
             width: 100%;
             padding: 15px;
             border: 2px solid #e1e5e9;
@@ -100,15 +89,13 @@
             transition: all 0.3s ease;
             background: #f8f9fa;
         }
-        
         input[type="number"]:focus {
             outline: none;
             border-color: #667eea;
             background: white;
             box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         }
-        
-        .submit-btn {
+         .submit-btn {
             width: 100%;
             padding: 15px;
             background: linear-gradient(135deg, #667eea, #764ba2);
@@ -122,17 +109,14 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        
-        .submit-btn:hover {
+         .submit-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
         }
-        
         .submit-btn:active {
             transform: translateY(0);
         }
-        
-        .prank-banner {
+         .prank-banner {
             position: fixed;
             top: 0;
             left: 0;
@@ -145,7 +129,6 @@
             z-index: 1000;
             animation: slideDown 0.5s ease-out;
         }
-        
         .prank-content {
             text-align: center;
             color: white;
@@ -156,21 +139,18 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.3);
             animation: bounce 0.6s ease-out;
         }
-        
-        .prank-title {
+         .prank-title {
             font-size: 4em;
             font-weight: bold;
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-        
-        .prank-message {
+          .prank-message {
             font-size: 1.5em;
             margin-bottom: 30px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
-        
-        .close-btn {
+         .close-btn {
             padding: 15px 30px;
             background: white;
             color: #ff6b6b;
@@ -181,13 +161,11 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-        
-        .close-btn:hover {
+         .close-btn:hover {
             background: #f1f1f1;
             transform: scale(1.05);
         }
-        
-        @keyframes slideDown {
+         @keyframes slideDown {
             from {
                 transform: translateY(-100%);
             }
@@ -195,8 +173,7 @@
                 transform: translateY(0);
             }
         }
-        
-        @keyframes bounce {
+         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {
                 transform: translateY(0);
             }
@@ -207,12 +184,10 @@
                 transform: translateY(-10px);
             }
         }
-        
-        .required {
+         .required {
             color: #ff6b6b;
         }
-        
-        .info-text {
+         .info-text {
             font-size: 14px;
             color: #666;
             margin-top: 20px;
@@ -230,23 +205,20 @@
             <h1>Shaheed Lieutenant Tanzim Cantonment Public School and College</h1>
             <p class="subtitle">SLTCPSC RAMU - Student Registration Portal</p>
         </div>
-        
-        <form id="registrationForm">
+         <form id="registrationForm">
             <div class="form-group">
                 <label for="schoolId">Student School ID <span class="required">*</span></label>
                 <input type="number" id="schoolId" name="schoolId" required placeholder="Enter your school ID (numbers only)" min="1">
             </div>
-            
-            <button type="submit" class="submit-btn">Complete Registration</button>
+             <button type="submit" class="submit-btn">Complete Registration</button>
         </form>
-        
-        <p class="info-text">
+         <p class="info-text">
             Please use your official school ID for registration. 
             You will receive confirmation and further instructions via your registered contact.
         </p>
     </div>
 
-    <div class="prank-banner" id="prankBanner">
+<div class="prank-banner" id="prankBanner">
         <div class="prank-content">
             <div class="prank-title">🎉 PRANKED! 🎉</div>
             <div class="prank-message">
@@ -257,7 +229,7 @@
         </div>
     </div>
 
-    <script>
+<script>
         // Load the school logo from URL
         function loadSchoolLogo() {
             const logoImg = document.getElementById('schoolLogo');
